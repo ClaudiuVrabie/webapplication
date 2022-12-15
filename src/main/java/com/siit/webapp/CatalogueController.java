@@ -11,10 +11,15 @@ public class CatalogueController {
         this.catalogueService = catalogueService;
     }
 
+
     @GetMapping("/students")
     public String getAllStudents(){
 
         return catalogueService.createStudentCatalogue();
     }
 
+    @GetMapping("/studentsGrades")
+    public float getAllStudentsGrades(){
+        return catalogueService.calculateMathematicalAverage();
+    }
 }
